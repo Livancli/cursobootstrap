@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <title>Bootstrap</title>
+</head>
+<body>
+  
+
+
+  <div class="progress" style="height: 30px;">
+    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 30%; height: 30px;">30%</div>
+  </div>
+  <div class="progress" style="height: 30px;">
+    <div class="progress-bar bg-danger" style="width: 50%; height: 30px;">50%</div>
+  </div>
+  <div class="progress" style="height: 30px;">
+    <div class="progress-bar bg-warning progress-bar-striped text-dark" style="width: 80%; height: 30px;">80%</div>
+  </div>
+  <div class="progress" style="height: 30px;">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 100%; height: 30px;">100%</div>
+  </div>
+  <div class="progress" style="height: 30px;">
+    <div class="progress-bar" style="width: 25%; height: 30px;">HTML : 25%</div>
+    <div class="progress-bar bg-warning text-dark" style="width: 40%; height: 30px;">JS : 40%</div>
+    <div class="progress-bar bg-danger" style="width: 23%; height: 30px;">CSS : 23%</div>
+  </div>
+
+
+  <script>
+    let progressBar = document.querySelector('.progress-bar');
+    progressBar.innerHTML = "0%";
+    progressBar.style.width = "0%"
+
+    let value = 0;
+
+    setInterval(()=>{
+      if(value > 35){
+        value = 35;
+      }
+      progressBar.innerHTML = value + "%";
+      progressBar.style.width = value + "%";
+      value ++;
+    }, 200)
+  </script>
+
+  
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+
+
+
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
+</body>
+</html>
